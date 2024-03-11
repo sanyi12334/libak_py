@@ -8,6 +8,22 @@ namespace libak
 {
     class Program
     {
+        static int osszegez(int[] t)
+        {
+            int osszeg=0;
+            for (int i = 0; i < t.Length; i++)
+            {
+                if (t[i] <= 3)
+                {
+                    osszeg += t[i];
+                }
+            }
+            return osszeg;
+        }
+        static void kiir_eredmenyek(int roka_libai)
+        {
+            Console.WriteLine($"{roka_libai}");
+        }
         static void kiir(int[] t, string cim)
         {
             Console.WriteLine(cim);
@@ -17,6 +33,8 @@ namespace libak
             }
             Console.WriteLine();
         }
+
+
         static void Main(string[] args)
         {
 
@@ -37,7 +55,10 @@ namespace libak
              */
 
             int[] libak = [1, 5, 2, 3, 4];
+            
             kiir(libak, "libák súlyai");
+            hany_kilo_libat_ehet_meg = osszegez(libak);
+            kiir_eredmenyek(hany_kilo_libat_ehet_meg);
             Console.WriteLine("nyomj egy billentyűt a kilépéshez");
             Console.ReadKey();
         }
