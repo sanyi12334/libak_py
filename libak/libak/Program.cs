@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,6 +58,7 @@ namespace libak
             
             kiir(libak, "libák súlyai");
             hany_kilo_libat_ehet_meg = osszegez(libak);
+            double atlag = (double)hany_kilo_libat_ehet_meg / libak.lenght;
             kiir_eredmenyek(hany_kilo_libat_ehet_meg);
             Console.WriteLine("nyomj egy billentyűt a kilépéshez");
             Console.ReadKey();
